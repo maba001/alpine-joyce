@@ -38,7 +38,6 @@ RUN apk search xclock \
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
 COPY /src/etc/tigervnc /etc/tigervnc/
-COPY /src/etc/bash.bashrc /etc/
 COPY /src/usr/ /usr/
 
 RUN mkdir -p /opt/floppies \
