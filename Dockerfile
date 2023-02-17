@@ -29,11 +29,9 @@ COPY --from=builder /opt/joyce /opt/joyce
 RUN apk update \
  && apk upgrade \
  && apk add sdl12-compat libxml2 \
- && apk add procps dbus-x11
-RUN apk search xclock \
- && apk add tigervnc xterm xclock \
- && apk add xfce4 xfce4-terminal dbus \
- && apk add terminus-font ttf-inconsolata ttf-dejavu
+ && apk add procps
+RUN apk add x11vnc xterm xclock \
+ && apk add xvfb xfce4 faenza-icon-theme
 
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
