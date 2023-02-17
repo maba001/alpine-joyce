@@ -32,8 +32,8 @@ RUN apk update \
  && apk add procps dbus-x11
 RUN apk search xclock \
  && apk add tigervnc xterm xclock \
- && apk add terminus-font ttf-inconsolata ttf-dejavu \
- && apk add font-noto font-noto-cjk ttf-font-awesome font-noto-extra
+ && apk add xfce4 xfce4-terminal dbus \
+ && apk add terminus-font ttf-inconsolata ttf-dejavu
 
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
