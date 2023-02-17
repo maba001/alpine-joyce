@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<pcw xmlns="http://www.seasip.demon.co.uk/joycecfg.dtd">
+    <hdc all8mb="0">
+        <drive letter="a" type="myz80">
+            <filename>/root/Joyce/Disks/a.dsk</filename>
+        </drive>
+        <drive letter="b" type="myz80">
+            <filename>/root/Joyce/Disks/b.dsk</filename>
+        </drive>
+        <drive letter="c" type="myz80">
+            <filename>/root/Joyce/Disks/c.dsk</filename>
+        </drive>
+        <drive letter="d" type="myz80">
+            <filename>/root/Joyce/Disks/d.dsk</filename>
+        </drive>
+        <drive letter="e" type="myz80">
+            <filename>/root/Joyce/Disks/e.dsk</filename>
+        </drive>
+        <drive letter="f" type="myz80">
+            <filename>/root/Joyce/Disks/f.dsk</filename>
+        </drive>
+        <drive letter="g" type="myz80">
+            <filename>/root/Joyce/Disks/g.dsk</filename>
+        </drive>
+        <drive letter="h" type="myz80">
+            <filename>/root/Joyce/Disks/h.dsk</filename>
+        </drive>
+        <drive letter="i" type="myz80">
+            <filename>/root/Joyce/Disks/i.dsk</filename>
+        </drive>
+        <drive letter="j" type="myz80">
+            <filename>/root/Joyce/Disks/j.dsk</filename>
+        </drive>
+        <drive letter="k" type="myz80">
+            <filename>/root/Joyce/Disks/k.dsk</filename>
+        </drive>
+        <drive letter="l" type="myz80">
+            <filename>/root/Joyce/Disks/l.dsk</filename>
+        </drive>
+        <drive letter="m" type="myz80">
+            <filename>/root/Joyce/Disks/m.dsk</filename>
+        </drive>
+        <drive letter="n" type="myz80">
+            <filename>/root/Joyce/Disks/n.dsk</filename>
+        </drive>
+        <drive letter="o" type="myz80">
+            <filename>/root/Joyce/Disks/o.dsk</filename>
+        </drive>
+        <drive letter="p" type="myz80">
+            <filename>/root/Joyce/Disks/p.dsk</filename>
+        </drive>
+    </hdc>
+    <terminal name="logo">
+        <colour fg="#ffffff" bg="#000000" name="colour"/>
+    </terminal>
+    <terminal name="gsx"/>
+    <terminal name="vga">
+        <colour fg="#55ff00" bg="#0000ff" name="menu"/>
+        <colour fg="#555500" bg="#0000aa" name="shadow"/>
+    </terminal>
+    <terminal name="debug">
+        <colour fg="#ff8000" bg="#000000" name="colour"/>
+    </terminal>
+    <fdc bootro="0">
+        <drive id="0" cylinders="83" heads="2" type="3.5" ref="" model="dsk"/>
+        <drive id="1" cylinders="83" heads="2" type="3.5" ref="" model="dsk"/>
+        <drive id="2" cylinders="" heads="" type="" ref="1" model="nc9"/>
+        <drive id="3" cylinders="" heads="" type="" ref="1" model="nc9"/>
+    </fdc>
+    <general model="8000">
+        <cpuspeed>100</cpuspeed>
+        <jdos>0</jdos>
+    </general>
+    <memory kbytes="2048"/>
+    <terminal name="pcw" beep="sound">
+        <refresh>75</refresh>
+        <colour fg="#ff0000" bg="#000000" name="beep"/>
+        <colour fg="#aaff55" bg="#000000" name="colour"/>
+    </terminal>
+    <terminal name="menu">
+        <colour fg="#55ffff" bg="#0000aa" name="colour"/>
+    </terminal>
+    <joystick name="external" type="0" stick="-1" sensitivity="16384" enabled="0"/>
+    <keyboard name="pcw" swapctrl="0" swapdel="0" lk1="0" lk2="0" lk3="0">
+        <joystick name="1" stick="-1" sensitivity="16384" enabled="0"/>
+        <joystick name="2" stick="-1" sensitivity="16384" enabled="0"/>
+    </keyboard>
+    <mouse name="pcw" type="amx" enabled="1"/>
+    <locolink name="slave" enabled="1">
+        <output></output>
+        <liblinkOutput>lpr</liblinkOutput>
+        <liblinkDriver>parpipe</liblinkDriver>
+    </locolink>
+    <printer name="matrix" enabled="1" width="2997" height="4208" format="PNG">
+        <pngoutputdir>/root/Joyce/Pngs</pngoutputdir>
+        <psoutputdir>/root/Joyce/PS</psoutputdir>
+    </printer>
+    <printer name="daisy" daisyenabled="1" width="999" height="2245" fontname="Courier" fontsize="10" format="PS" enabled="1" timeout="30">
+        <psoutputdir>/root/Joyce/PS</psoutputdir>
+        <printwheel>
+            <pin number="0" character="35"/>
+            <pin number="1" character="46"/>
+            <pin number="2" character="60"/>
+            <pin number="3" character="91"/>
+            <pin number="4" character="61"/>
+            <pin number="5" character="57"/>
+            <pin number="6" character="56"/>
+            <pin number="7" character="55"/>
+            <pin number="8" character="54"/>
+            <pin number="9" character="53"/>
+            <pin number="10" character="48"/>
+            <pin number="11" character="52"/>
+            <pin number="12" character="51"/>
+            <pin number="13" character="50"/>
+            <pin number="14" character="49"/>
+            <pin number="15" character="44"/>
+            <pin number="16" character="45"/>
+            <pin number="17" character="93"/>
+            <pin number="18" character="107"/>
+            <pin number="19" character="121"/>
+            <pin number="20" character="109"/>
+            <pin number="21" character="102"/>
+            <pin number="22" character="100"/>
+            <pin number="23" character="103"/>
+            <pin number="24" character="110"/>
+            <pin number="25" character="99"/>
+            <pin number="26" character="116"/>
+            <pin number="27" character="114"/>
+            <pin number="28" character="108"/>
+            <pin number="29" character="117"/>
+            <pin number="30" character="101"/>
+            <pin number="31" character="111"/>
+            <pin number="32" character="105"/>
+            <pin number="33" character="97"/>
+            <pin number="34" character="115"/>
+            <pin number="35" character="104"/>
+            <pin number="36" character="113"/>
+            <pin number="37" character="112"/>
+            <pin number="38" character="119"/>
+            <pin number="39" character="98"/>
+            <pin number="40" character="118"/>
+            <pin number="41" character="59"/>
+            <pin number="42" character="120"/>
+            <pin number="43" character="190"/>
+            <pin number="44" character="106"/>
+            <pin number="45" character="122"/>
+            <pin number="46" character="189"/>
+            <pin number="47" character="62"/>
+            <pin number="48" character="32"/>
+            <pin number="49" character="46"/>
+            <pin number="50" character="178"/>
+            <pin number="51" character="33"/>
+            <pin number="52" character="43"/>
+            <pin number="53" character="40"/>
+            <pin number="54" character="39"/>
+            <pin number="55" character="38"/>
+            <pin number="56" character="95"/>
+            <pin number="57" character="163"/>
+            <pin number="58" character="41"/>
+            <pin number="59" character="36"/>
+            <pin number="60" character="47"/>
+            <pin number="61" character="34"/>
+            <pin number="62" character="42"/>
+            <pin number="63" character="44"/>
+            <pin number="64" character="63"/>
+            <pin number="65" character="64"/>
+            <pin number="66" character="75"/>
+            <pin number="67" character="89"/>
+            <pin number="68" character="77"/>
+            <pin number="69" character="70"/>
+            <pin number="70" character="68"/>
+            <pin number="71" character="71"/>
+            <pin number="72" character="78"/>
+            <pin number="73" character="67"/>
+            <pin number="74" character="84"/>
+            <pin number="75" character="82"/>
+            <pin number="76" character="76"/>
+            <pin number="77" character="85"/>
+            <pin number="78" character="69"/>
+            <pin number="79" character="79"/>
+            <pin number="80" character="73"/>
+            <pin number="81" character="65"/>
+            <pin number="82" character="83"/>
+            <pin number="83" character="72"/>
+            <pin number="84" character="81"/>
+            <pin number="85" character="80"/>
+            <pin number="86" character="87"/>
+            <pin number="87" character="66"/>
+            <pin number="88" character="86"/>
+            <pin number="89" character="58"/>
+            <pin number="90" character="88"/>
+            <pin number="91" character="188"/>
+            <pin number="92" character="74"/>
+            <pin number="93" character="90"/>
+            <pin number="94" character="37"/>
+            <pin number="95" character="179"/>
+            <pin number="96" character="32"/>
+            <pin number="97" character="124"/>
+            <pin number="98" character="247"/>
+            <pin number="99" character="176"/>
+            <pin number="100" character="126"/>
+        </printwheel>
+        <output></output>
+        <liblinkOutput>lpr</liblinkOutput>
+        <liblinkDriver>parpipe</liblinkDriver>
+    </printer>
+    <printer name="centronics" enabled="1" timeout="30">
+        <output></output>
+        <liblinkOutput>lpr</liblinkOutput>
+        <liblinkDriver>parpipe</liblinkDriver>
+    </printer>
+    <printer name="cps8256" enabled="1" timeout="30">
+        <sioout>/dev/ttyS0</sioout>
+        <sioin>/dev/ttyS0</sioin>
+        <output></output>
+        <liblinkOutput>lpr</liblinkOutput>
+        <liblinkDriver>parpipe</liblinkDriver>
+    </printer>
+</pcw>

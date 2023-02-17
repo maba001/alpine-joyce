@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<bootlist xmlns="http://www.seasip.demon.co.uk/joycebt.dtd">
+    <bootdisc id="1">CP/M Standard A</bootdisc>
+    <bootdisc id="2">CP/M Standard B</bootdisc>
+</bootlist>

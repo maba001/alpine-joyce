@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo Starting VNC Amstrad Joyce server on port 5901
+echo ==============================================
+
+vncserver --I-KNOW-THIS-IS-INSECURE
+
+tail -f /root/Joyce/joyce.log
