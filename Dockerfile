@@ -35,7 +35,7 @@ RUN apk add x11vnc xterm xclock \
 
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
-COPY /src/etc/tigervnc /etc/tigervnc/
+# COPY /src/etc/tigervnc /etc/tigervnc/
 COPY /src/usr/ /usr/
 
 RUN mkdir -p /opt/floppies \
