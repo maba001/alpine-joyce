@@ -34,6 +34,9 @@ RUN apk add x11vnc xvfb xfce4 xfce4-terminal
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
 COPY /src/usr/ /usr/
+COPY /src/startvnc /root/
+
+RUN chmod +x /root/startvnc
 
 RUN mkdir -p /opt/floppies \
  && mkdir -p /opt/external-mount
