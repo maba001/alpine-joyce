@@ -7,7 +7,7 @@ RUN apk update \
  && apk add sdl12-compat-dev
 
 WORKDIR /tmp
-RUN curl -s -o joyce.tar.gz https://www.seasip.info/Unix/Joyce/joyce-2.4.0.tar.gz
+RUN curl -s -o joyce.tar.gz https://www.seasip.info/Unix/Joyce/joyce-2.4.1.tar.gz
 RUN tar xzf joyce.tar.gz
 
 RUN mkdir -p /opt/joyce \
