@@ -1,10 +1,11 @@
-FROM alpine:3 as builder
+FROM debian:bullseye as builder
 
-RUN apk update \
- && apk upgrade \
- && apk add curl readline-dev libpng-dev \
- && apk add build-base libxml2-dev \
- && apk add sdl12-compat-dev
+RUN apt-get update \
+ && apt-get upgrade -y \
+ && apt-get install -y curl libreadline8 libreadline8 readline-common \
+ && apt-get install -y build-essential libpng-dev libxml2-dev \
+ && apt-get install -y libsdl1.2-dev libsdl1.2debian \
+ && apt-get clean
 
 WORKDIR /tmp
 RUN curl -s -o joyce.tar.gz https://www.seasip.info/Unix/Joyce/joyce-2.4.0.tar.gz
@@ -14,14 +15,12 @@ RUN mkdir -p /opt/joyce \
  && cd /tmp/joyce* \
  && pwd \
  && ./configure --prefix=/opt/joyce \
- && make || true \
- && make check || true
+ && make \
+ && make check
 
-# RUN cd /tmp/joyce* \
-# && make install
-RUN mkdir -p /opt/joyce \
- && touch /opt/joyce/dummy
-
+RUN cd /tmp/joyce* \
+ && make install
+ 
 FROM alpine:3
 
 COPY --from=builder /opt/joyce /opt/joyce
