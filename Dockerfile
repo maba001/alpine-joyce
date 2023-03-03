@@ -48,6 +48,5 @@ ENV USER=root
 ENV DISPLAY=:1
 
 WORKDIR /root
-RUN chmod 600 /root/.vnc/passwd
 
 CMD [ "/usr/local/bin/startup" ]
