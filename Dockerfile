@@ -29,12 +29,10 @@ RUN apk update \
  && apk upgrade \
  && apk add sdl12-compat libxml2 \
  && apk add procps
-RUN apk add x11vnc xterm xclock \
- && apk add xvfb xfce4 faenza-icon-theme
+RUN apk add x11vnc xvfb xfce4 xfce4-terminal
 
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
-# COPY /src/etc/tigervnc /etc/tigervnc/
 COPY /src/usr/ /usr/
 
 RUN mkdir -p /opt/floppies \
