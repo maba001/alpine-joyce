@@ -7,7 +7,7 @@ RUN apk update \
  && apk add sdl12-compat-dev
 
 WORKDIR /tmp
-RUN curl -s -o joyce.tar.gz https://www.seasip.info/Unix/Joyce/joyce-2.4.0.tar.gz
+RUN curl -s -o joyce.tar.gz https://www.seasip.info/Unix/Joyce/joyce-2.4.1.tar.gz
 RUN tar xzf joyce.tar.gz
 
 RUN mkdir -p /opt/joyce \
@@ -21,7 +21,7 @@ RUN mkdir -p /opt/joyce \
 # && make install
 RUN mkdir -p /opt/joyce \
  && touch /opt/joyce/dummy
-
+ 
 FROM alpine:3
 
 COPY --from=builder /opt/joyce /opt/joyce
@@ -30,13 +30,14 @@ RUN apk update \
  && apk upgrade \
  && apk add sdl12-compat libxml2 \
  && apk add procps
-RUN apk add x11vnc xterm xclock \
- && apk add xvfb xfce4 faenza-icon-theme
+RUN apk add x11vnc xvfb xfce4 xfce4-terminal
 
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
-# COPY /src/etc/tigervnc /etc/tigervnc/
 COPY /src/usr/ /usr/
+COPY /src/startvnc /root/
+
+RUN chmod +x /root/startvnc
 
 RUN mkdir -p /opt/floppies \
  && mkdir -p /opt/external-mount
@@ -47,6 +48,5 @@ ENV USER=root
 ENV DISPLAY=:1
 
 WORKDIR /root
-RUN chmod 600 /root/.vnc/passwd
 
 CMD [ "/usr/local/bin/startup" ]
