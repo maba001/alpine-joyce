@@ -22,15 +22,15 @@ RUN mkdir -p /opt/joyce \
 RUN mkdir -p /opt/joyce \
  && touch /opt/joyce/dummy
  
-FROM alpine:3
+# FROM alpine:3
 
-COPY --from=builder /opt/joyce /opt/joyce
+# COPY --from=builder /opt/joyce /opt/joyce
 
-RUN apk update \
- && apk upgrade \
- && apk add sdl12-compat libxml2 \
- && apk add procps
-RUN apk add x11vnc xvfb xfce4 xfce4-terminal
+# RUN apk update \
+# && apk upgrade \
+# && apk add sdl12-compat libxml2 \
+# && apk add procps
+# RUN apk add x11vnc xvfb xfce4 xfce4-terminal
 
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
@@ -49,4 +49,4 @@ ENV DISPLAY=:1
 
 WORKDIR /root
 
-CMD [ "/usr/local/bin/startup" ]
+# CMD [ "/usr/local/bin/startup" ]
