@@ -7,7 +7,7 @@ RUN apk update \
  && apk add sdl12-compat-dev
 
 WORKDIR /tmp
-RUN curl -s -o joyce.tar.gz https://www.seasip.info/Unix/Joyce/joyce-2.4.1.tar.gz
+RUN curl -s -o joyce.tar.gz https://www.seasip.info/Unix/Joyce/joyce-2.4.2.tar.gz
 RUN tar xzf joyce.tar.gz
 
 RUN mkdir -p /opt/joyce \
@@ -22,15 +22,15 @@ RUN mkdir -p /opt/joyce \
 RUN mkdir -p /opt/joyce \
  && touch /opt/joyce/dummy
  
-FROM alpine:3
+# FROM alpine:3
 
-COPY --from=builder /opt/joyce /opt/joyce
+# COPY --from=builder /opt/joyce /opt/joyce
 
-RUN apk update \
- && apk upgrade \
- && apk add sdl12-compat libxml2 \
- && apk add procps
-RUN apk add x11vnc xvfb xfce4 xfce4-terminal
+# RUN apk update \
+# && apk upgrade \
+# && apk add sdl12-compat libxml2 \
+# && apk add procps
+# RUN apk add x11vnc xvfb xfce4 xfce4-terminal
 
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
@@ -49,4 +49,4 @@ ENV DISPLAY=:1
 
 WORKDIR /root
 
-CMD [ "/usr/local/bin/startup" ]
+# CMD [ "/usr/local/bin/startup" ]
