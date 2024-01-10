@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 echo Starting VNC Amstrad Joyce server on port 5901
 echo ==============================================
 
-nohup /usr/bin/Xvfb :1 -screen 0 1024x768x24 -ac +extension GLX +render -noreset > /tmp/xvfb.log 2>&1 &
-nohup startxfce4 > /tmp/xfce4.log 2>&1 &
-nohup x11vnc -xkb -noxrecord -noxfixes -noxdamage -display :1 -forever -bg -rfbport 5901 > /tmp/x11vnc.log 2>&1 &
+nohup /usr/bin/Xvfb :1 -screen 0 800x600x24 -ac +extension GLX +render -noreset > /tmp/xvfb.log 2>&1 &
+x11vnc -xkb -noxrecord -noxfixes -noxdamage -display :1 -forever -bg -rfbport 5901 > /tmp/x11vnc.log 2>&1
+nohup /opt/joyce/bin/xjoyce > /tmp/joyce-startup.log 2>&1
 
 tail -f /root/Joyce/joyce.log
