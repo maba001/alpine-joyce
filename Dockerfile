@@ -13,9 +13,9 @@ RUN unzip joyce.zip
 RUN mkdir -p /opt/joyce \
  && cd /tmp/joyce* \
  && pwd \
- && chmod +x configure config/install-sh \
- && ./configure --prefix=/opt/joyce || true \
- && cat config.log \
+ && chmod +x configure config/install-sh
+RUN cd /tmp/joyce* \
+ && ./configure --prefix=/opt/joyce \
  && make \
  && make check
 
@@ -34,7 +34,7 @@ RUN apk update \
  && apk add bash procps \
  && apk add alpine-conf
 RUN apk add x11vnc 
-RUN apk add xvfb xfce4 kbd lxdm xfce4-terminal mesa-dri-gallium
+RUN apk add xvfb xfce4 kbd lxdm mesa-dri-gallium
 
 COPY /src/root/ /root/
 COPY /src/etc/profile /etc/
