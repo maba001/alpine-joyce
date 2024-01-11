@@ -1,6 +1,9 @@
 # alpine-joyce
 
-After encapsulating operating systems like MS-DOS into container, I decided to go one step further back in history. Now I am extending to the **ancient** Zilog Z80 processor. At the time Amstrad had some Z80 based machines on the market. They were called Joyce and Anne. So why not put them into a container.
+[![Docker Repository on Quay](https://quay.io/repository/mbayreut/alpine-joyce/status "Docker Repository on Quay")](https://quay.io/repository/mbayreut/alpine-joyce)
+
+
+After encapsulating operating systems like MS-DOS into container, I decided to go one step further back in history. Now I am extending to the **ancient** [Zilog Z80 processor](https://en.wikipedia.org/wiki/Zilog_Z80). The [Z80](https://en.wikipedia.org/wiki/Zilog_Z80) and the original [Intel 8080](https://en.wikipedia.org/wiki/Intel_8080) were 8-Bit processors. They had 16 address lines to address RAM. This translates to 64k of addressable RAM. At the time Amstrad had some Z80 based machines on the market. They were called Joyce and Anne. So why not put them into a container.
 
 ## Purpose
 
