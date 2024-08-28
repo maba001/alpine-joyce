@@ -7,8 +7,10 @@ RUN apk update \
  && apk add sdl12-compat-dev
 
 WORKDIR /tmp
-RUN curl -s -o joyce.zip https://codeload.github.com/maba001/joyce-2.4.2/zip/refs/heads/main
-RUN unzip joyce.zip
+# RUN curl -s -o joyce.zip https://codeload.github.com/maba001/joyce-2.4.2/zip/refs/heads/main
+RUN curl -s -o joyce.tar.gz https://www.seasip.info/Unix/Joyce/joyce-2.5.2.tar.gz
+# RUN unzip joyce.zip
+RUN tar xzf joyce.tar.gz
 
 RUN mkdir -p /opt/joyce \
  && cd /tmp/joyce* \
